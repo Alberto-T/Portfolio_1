@@ -127,6 +127,30 @@ const About = () => {
                 <h2 className='section-title mb-8 xl:mb-16 text-center mx-auto'>
                     About me
                 </h2>
+                <div className='flex flex-col xl:flex-row'>
+                    {/* image */}
+                    <div className='hidden xl:flex flex-1 relative'>
+                        <DevImg containerStyles='w-[505px] h-[505px] bg-no-repeat relative' imgSrc='/about/avatar.png' />
+                    </div>
+                    {/* tabs */}
+                    <div className='flex-1'>
+                        <Tabs defaultValue='personal'>
+                            <TabsList>
+                                <TabsTrigger value='personal'>Personal Info</TabsTrigger>
+                                <TabsTrigger value='qualifications'>Qualifications</TabsTrigger>
+                                <TabsTrigger value='skilss'>Skills</TabsTrigger>
+                            </TabsList>
+                            {/* tabs content */}
+                            <div>
+                                {/* personal */}
+                                <TabsContent value='personal'>personal info</TabsContent>
+                                <TabsContent value='qualifications'>
+                                    qualifications info
+                                </TabsContent>
+                            </div>
+                        </Tabs>
+                    </div>
+                </div>
             </div>
         </section>
     );
