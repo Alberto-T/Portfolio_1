@@ -135,18 +135,40 @@ const About = () => {
                     {/* tabs */}
                     <div className='flex-1'>
                         <Tabs defaultValue='personal'>
-                            <TabsList>
-                                <TabsTrigger value='personal'>Personal Info</TabsTrigger>
-                                <TabsTrigger value='qualifications'>Qualifications</TabsTrigger>
-                                <TabsTrigger value='skilss'>Skills</TabsTrigger>
+                            <TabsList className='w-full grid xl:grid-cols-3 xl:max-w-[520px] xl:border dark:border-none'>
+                                <TabsTrigger className='w-[162px] xl:w-auto' value='personal'>Personal Info</TabsTrigger>
+                                <TabsTrigger className='w-[162px] xl:w-auto' value='qualifications'>Qualifications</TabsTrigger>
+                                <TabsTrigger className='w-[162px] xl:w-auto' value='skills'>Skills</TabsTrigger>
                             </TabsList>
                             {/* tabs content */}
-                            <div>
+                            <div className='text-lg mt-12 xl:mt-8'>
                                 {/* personal */}
-                                <TabsContent value='personal'>personal info</TabsContent>
+                                <TabsContent value='personal'>
+                                    <div className='text-center xl:text-left'>
+                                        <h3 className='h3 mb-4'>Información personal</h3>
+                                        <p className='subtitle max-w-xl max-auto xl:mx-0'>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus delectus expedita, ducimus saepe voluptatem dignissimos esse, quos recusandae minus sapiente dolore porro dolorum molestias. Ut dolorem optio cupiditate rerum doloremque!
+                                        </p>
+                                        {/* icons */}
+                                        <div>
+                                            {infoData.map((item, index) => {
+                                                return (
+                                                    <div
+                                                        className='flex items-center gap-x-4 mx-auto xl:mx-0'
+                                                        key={index}
+                                                    >
+                                                        <div className='text-primary'>{item.icon}</div>
+                                                        <div>{item.text}</div>
+                                                    </div>
+                                                );
+                                            })}
+                                        </div>
+                                    </div>
+                                </TabsContent>
                                 <TabsContent value='qualifications'>
                                     qualifications info
                                 </TabsContent>
+                                <TabsContent value='skills'>skills info</TabsContent>
                             </div>
                         </Tabs>
                     </div>
