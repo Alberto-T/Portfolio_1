@@ -136,9 +136,9 @@ const About = () => {
                     <div className='flex-1'>
                         <Tabs defaultValue='personal'>
                             <TabsList className='w-full grid xl:grid-cols-3 xl:max-w-[520px] xl:border dark:border-none'>
-                                <TabsTrigger className='w-[162px] xl:w-auto' value='personal'>Personal Info</TabsTrigger>
-                                <TabsTrigger className='w-[162px] xl:w-auto' value='qualifications'>Qualifications</TabsTrigger>
-                                <TabsTrigger className='w-[162px] xl:w-auto' value='skills'>Skills</TabsTrigger>
+                                <TabsTrigger className='w-[162px] xl:w-auto' value='personal'>¿Quién soy?</TabsTrigger>
+                                <TabsTrigger className='w-[162px] xl:w-auto' value='qualifications'>Experiencia</TabsTrigger>
+                                <TabsTrigger className='w-[162px] xl:w-auto' value='skills'>Habilidades</TabsTrigger>
                             </TabsList>
                             {/* tabs content */}
                             <div className='text-lg mt-12 xl:mt-8'>
@@ -150,7 +150,7 @@ const About = () => {
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus delectus expedita, ducimus saepe voluptatem dignissimos esse, quos recusandae minus sapiente dolore porro dolorum molestias. Ut dolorem optio cupiditate rerum doloremque!
                                         </p>
                                         {/* icons */}
-                                        <div>
+                                        <div className='grid xl:grid-cols-2 gap-4 mb-12'>
                                             {infoData.map((item, index) => {
                                                 return (
                                                     <div
@@ -163,8 +163,16 @@ const About = () => {
                                                 );
                                             })}
                                         </div>
+                                        {/* languages */}
+                                        <div className='flex flex-col gap-y-2'>
+                                            <div className='text-primary'>Idiomas</div>
+                                            <div className='border-b border-border'></div>
+                                            <div>Español - Nativo</div>
+                                            <div>Inglés - Intermedio</div>
+                                        </div>
                                     </div>
                                 </TabsContent>
+                                {/* qualifications */}
                                 <TabsContent value='qualifications'>
                                     qualifications info
                                 </TabsContent>
